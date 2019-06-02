@@ -1,0 +1,387 @@
+//Smartphones 
+
+@include mediaSm {
+
+    /*Header style for media Sm */
+
+    .main-header {
+        .container {
+            float: left;
+            width: 92%;
+            padding: 0 4%;
+
+
+            .logo {
+                .logo-image {
+                    z-index: 1;
+                }
+            }
+
+            .menu-btn {
+                position: absolute;
+                z-index: 4;
+                top: 59.5px;
+                right: 10px;
+                cursor: pointer;
+                content: '';
+                background: transparent;
+                @include easeOut;
+
+                .btn-line {
+                    width: 30px;
+                    height: 4px;
+                    background: $link-hover;
+                    margin-bottom: 5px;
+                    border-radius: 2px;
+                    @include easeOut;
+                }
+
+                // Rotate X
+                &.close {
+                    @include easeOut;
+
+                    .btn-line {
+
+                        // Line one rotate
+                        &:nth-child(1) {
+                            transform: rotate(45deg) translate(7px, 5px);
+                        }
+
+                        // Line two hide
+                        &:nth-child(2) {
+                            opacity: 0;
+                        }
+
+                        // Line three rotate
+                        &:nth-child(3) {
+                            transform: rotate(-45deg) translate(7.5px, -6px);
+                        }
+                    }
+
+                    position: fixed;
+                }
+
+            }
+
+            .menu {
+                position: fixed;
+                z-index: 1;
+                background-color: #F5F6F8;
+                padding-top: 126px;
+                padding-right: 4%;
+                padding-left: 4%;
+                top: 0px;
+                left: 0px;
+                margin-top: 0;
+                width: 100%;
+                height: 100vh;
+                float: none;
+                visibility: hidden;
+
+                &.show {
+                    visibility: visible;
+                    display: block;
+                }
+
+                .menu-nav {
+                    display: flex;
+                    flex-flow: column wrap;
+                    background-color: #F5F6F8;
+                    height: 100%;
+                    line-height: 100%;
+                    transform: translate3d(0, 0, 0);
+
+
+                    &.show {
+                        transform: translate3d(0, 0, 0);
+                    }
+
+                    .nav-item {
+                        font-size: 1.375rem;
+                        font-weight: 300;
+                        list-style: none;
+
+                        &:last-child {
+                            margin-right: 15px;
+                        }
+
+                        .link {
+                            display: block;
+                            margin-bottom: 20px;
+                            padding-bottom: 20px;
+                            border-bottom: 2px solid #f1f1f1f1;
+                            position: relative;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /* Main container style for mediaSm */
+
+
+
+    .main {
+        padding: 0;
+        float: left;
+        width: 100%;
+
+        .wrap {
+            .title {
+                float: left;
+                width: 92%;
+                padding: 0 4%;
+
+            }
+        }
+
+        .main-part {
+            width: 100%;
+            padding: 0 4%;
+            float: left;
+
+            .part {
+                float: left;
+                width: 92%;
+
+            }
+
+            .sidebar {
+                float: left;
+                width: 92%;
+                padding: 0 4%;
+                min-height: 0;
+                border-top: 1px solid #eaeaee;
+                border-left: none;
+                padding-bottom: 50px;
+            }
+        }
+
+        h1 {
+            font-size: 1rem;
+        }
+
+        .row {
+            padding: 15px;
+
+            .projects {
+                grid-template-columns: 1fr;
+
+                .item {
+                    .description {
+                        bottom: -54px;
+                        padding: .5rem;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* Footer style for mediaSm*/
+
+
+    .main-footer {
+        min-height: 120px;
+        float: left;
+
+        .container {
+            width: 92%;
+            padding: 0 4%;
+
+            .soc-net {
+
+                margin-bottom: 0;
+                text-align: center;
+
+                li {
+                    display: inline;
+
+                    a {
+                        img {
+                            width: 50px;
+                            height: 50px;
+                            margin-top: 15px;
+
+                            &:hover {
+                                opacity: .7;
+                                transition: all .3s;
+                            }
+                        }
+                    }
+
+                    span {
+                        display: none;
+                    }
+
+                }
+            }
+
+
+
+            .footer-bottom {
+                .back-to-top {
+                    margin-top: -5px;
+
+
+                    .fa {
+                        visibility: hidden;
+
+                        &.fa-chevron-up {
+                            visibility: visible;
+
+                            &:hover {
+                                color: #2A3B4E;
+                                transition: all .3s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Tablets & Small Laptops
+@include mediaMd {
+
+    /* Header style for media Md */
+    .main-header {
+        .container {
+            float: left;
+            width: 92%;
+            padding: 0 4%;
+
+            .logo {
+                .logo-image {
+                    z-index: 1;
+                }
+            }
+
+        }
+    }
+
+
+    /* Main container style for media Md */
+
+    .main {
+        .wrap {
+            .title {
+                float: left;
+                width: 92%;
+                padding: 0 4%;
+            }
+        }
+
+        .main-part {
+            width: 100%;
+            padding: 0 4%;
+            float: left;
+
+            .part {
+                float: left;
+                width: 92%;
+            }
+
+
+        }
+
+        .row {
+            padding: 15px;
+
+            .projects {
+                grid-template-columns: repeat(2, 1fr);
+
+                .item {
+                    .description {
+                        font-size: 15px;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-btn {
+        visibility: hidden;
+    }
+
+    .sm-menu {
+        display: none;
+    }
+
+    .main-footer {
+        .row {
+            padding: 0;
+        }
+    }
+}
+
+//Desctop&Laptop
+@include mediaLg {
+    .main {
+
+
+        .projects {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .menu-btn {
+        visibility: hidden;
+    }
+
+    .sm-menu {
+        display: none;
+    }
+
+    .main-footer {
+        .wrapper {
+            .boxes {
+                .buffer-top {
+                    margin-right: 16px;
+
+                    input[type="text"],
+                    input[type="email"],
+                    input[type="phone"] {
+                        display: inline-block;
+                        width: 32%;
+                        background-color: #f5f6f8;
+                        font-family: "Varela Round", sans-serif;
+                        padding: 10px 9px 9px;
+                        border-radius: 5px;
+                        border: none;
+                        outline: none;
+                    }
+
+                    input[type="text"],
+                    input[type="email"] {
+                        margin-bottom: 0px;
+                        margin-right: 5px;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+//Widescreens
+@include mediaXl {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-btn {
+        visibility: hidden;
+    }
+
+    .sm-menu {
+        display: none;
+    }
+}

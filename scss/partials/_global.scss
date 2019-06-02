@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: "Varela Round", sans-serif;
+    background: url("../img/bg.png");
+    color: $main-color;
+    font-size: 16px;
+}
+
+main {
+    min-height: calc(100vh - 234px);
+}
+
+
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+}
+
+a,
+a:hover,
+a:visited,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+
+a {
+    color: $link-color;
+
+    &:hover {
+        color: $link-hover;
+        
+    } 
+}

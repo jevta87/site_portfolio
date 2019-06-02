@@ -1,0 +1,272 @@
+// Media query for MD 
+
+@media (min-width: 768px) {
+
+    //Main header for MD
+    .main-header {
+        .container {
+            .logo{
+                float: left;
+            }
+            .navbar {
+                position: absolute;
+                right: 14%;
+                float: right;
+                .menu-btn {
+                    visibility: hidden;
+                }
+                
+                .menu {
+                    position: absolute;
+                    height: 0vh;
+                    width: 50%;
+                    left: -326px;
+                    visibility: visible;
+                    .menu-nav {
+                        flex-flow: row;                       
+                        margin-top: 37px;
+                        transform: none;
+                        
+                        .nav-item {
+                            &:not(:last-child){
+                                margin-right: 33px;
+                            }
+                            .link {
+                                display: inline;
+                                margin-bottom: 0;
+                                padding-bottom: 0;
+                                border-bottom: none;
+                                
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    .container {
+        
+        .navbar {
+            position: absolute;
+            right: 14%;
+            
+            .menu-btn {
+                visibility: hidden;
+            }
+            
+            .menu {
+                position: absolute;
+                height: 0vh;
+                width: 50%;
+                left: -326px;
+                visibility: visible;
+                .menu-nav {
+                    flex-flow: row;                       
+                    margin-top: 37px;
+                    transform: none;
+                    
+                    .nav-item {
+                        &:not(:last-child){
+                            margin-right: 35px;
+                        }
+                        .link {
+                            display: inline;
+                            margin-bottom: 0;
+                            padding-bottom: 0;
+                            border-bottom: none;
+                            
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .homepage {
+        .home-picture {
+            padding: 50px 60px 50px;
+            >img {
+                margin-top: 100px;
+            }
+
+        }
+        .text {
+            margin-top: 0;
+            width: 50%;
+            >h1 {
+                text-align: center;
+                font-size: 2rem;
+                margin-top: 10px;
+            }
+        }
+    }
+    .homepage-contact {
+        .soc-net {
+            li{
+                a{
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+   
+    //Main container for MD
+   
+
+
+
+    //Main footer for MD
+    .main-footer {
+        .container {
+            .footer-bottom {
+                .back-to-top {
+                    .fa {
+                        &.fa-chevron-up {
+                            visibility: hidden;
+                        }
+                        &.fa-arrow-up {
+                            visibility: visible;
+                            &:hover {
+                                color: #2A3B4E;
+                                @include easeOut;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+//Media query for LG
+
+@media (min-width: 992px) {
+
+      //Main header for LG
+      .main-header {
+        .container {
+           position: relative;
+            width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+            padding-right: 0;
+            float: none;
+            .logo {
+                float: left;
+            }
+           .navbar {
+               position: absolute;
+               float: right;
+               .menu {
+                position: absolute;
+                height: 0vh;
+                width: 50%;
+                
+               }
+           }
+        }
+    }
+
+    //Main container for LG
+
+    .main {
+        .wrap {
+            .title {
+                width: 960px;
+                margin: 0 auto;
+                padding: 0;
+            }
+        }
+        .main-part {
+            width: 960px;
+            margin: 0 auto;
+            padding: 0;
+            overflow: auto;
+            .part {
+                float: left;
+                width: 680px;
+                text-align: left;
+            }
+            .sidebar {
+                float: right;
+                border-top: none;
+                border-left: 1px solid #eaeaea;
+                width: 235px;
+                padding-top: 25px;
+                padding-left: 20px;
+                min-height: 600px;
+            }
+        }
+        .row {
+            width: 960px;
+            margin: 0 auto;
+            .projects {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .info {
+            width: 960px;
+            margin: 0 auto;
+            .picture {
+                margin: 10px;
+            } 
+        }
+        .cv {
+            width: 960px;
+            margin: 0 auto;
+        }
+    }
+
+    .homepage {
+        .home-picture {
+            padding: 150px 230px 50px;
+            >img {
+                margin-top: 55px;
+            }
+
+        }
+        .text {
+            margin-top: 0;
+            width: 50%;
+            >h1 {
+                text-align: center;
+                font-size: 2rem;
+                margin-top: 10px;
+            }
+        }
+    }
+    .homepage-contact {
+        .soc-net {
+            li{
+                a{
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        margin-right: 20px;
+                        margin-top: 55px;
+                    }
+                }
+            }
+        }
+    }
+
+
+  //Main footer for LG
+    .main-footer{
+        .container {
+            width: 960px;
+            margin: 0 auto;
+        }
+        
+    }
+}
